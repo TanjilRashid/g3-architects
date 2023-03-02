@@ -31,11 +31,15 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav-title h2{
     font-weight: 700;
     font-size: 32px;
     line-height: 53px;
+}
+.ham-burger{
+    display: none;
 }
 .nav-items{
     display: flex;
@@ -77,9 +81,10 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+    width: 150%;
 }
 .features-image img{
-    width: 250px;
+    width: 100%;
 }
 .features-text p{
     margin: 20px 0;
@@ -180,27 +185,115 @@ footer{
     Responsive
     -------- */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 768px) {
+    header, main, footer{
+        padding: 50px 30px;
+    }
+    .nav-title h2{
+        font-size: 28px;
+    }
+    .nav-items{
+        display: none;
+    }
+    .ham-burger{
+        display: block;
+        font-size: 24px;
+    }
+    .banner{
+        gap: 12px;
+    }
+    .banner h1{
+        font-size: 36px;
+        line-height: 35px;
+    }
+    .features{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .features-image{
+        width: 100%;
+    }
+    .features-image img{
+        width: 100%;
+    }
+    .experience{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .experience-text{
+        padding-right: 0px;
+    }
+    .experience-image img{
+        width: 100%;
+    }
+    .y-exp{
+        left: -18px;
+        padding: 18px;
+    }
+    .facts{
+        text-align: center;
+    }
+    .facts-counter{
+        margin-top: 30px;
+    }
+    .counter{
+        padding: 12px;
+    }
+    .counter h2{
+        font-size: 14px;
+    }
+    .counter h4{
+        font-size: 12px;
+    }
+    footer{
+        text-align: center;
+    }
+    .sponser-list{
+        margin: 40px 0 40px;
+    }
+    .copyright{
+        margin: 60px 0 20px;
+    }
   }
   
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    
+  @media only screen and (max-width: 768px) and (min-width: 601px) {
+    .ham-burger{
+        display: none;
+    }
+    .nav-items{
+        display: flex;
+    }
+    .features-image{
+        width: 100%;
+    }
+} 
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+    .features-image{
+          width: 150%;
+    }
+    .features-image img{
+        width: 100%;
+    }
+    .experience-image img{
+        width: 360px;
+    }
+    header, main, footer{
+        padding: 50px 30px;
+    }
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    
-  } 
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    
-  } 
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    
+  @media only screen and (max-width: 1200px) and (min-width: 993px) {
+    .experience{
+        gap: 60px;
+        align-items: center;
+    }
+    .experience-text{
+        padding-right: 0px;
+    }
+    .experience-image img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: -110px 25%;
+    }
   }
